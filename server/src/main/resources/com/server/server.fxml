@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.server.ServerController">
+    <children>
+        <ListView fx:id="currentBid" layoutX="26.0" layoutY="73.0" prefHeight="23.0" prefWidth="167.0" />
+        <ListView fx:id="bidProcess" layoutX="26.0" layoutY="107.0" prefHeight="166.0" prefWidth="167.0" />
+        <ListView fx:id="bidddingResult" layoutX="210.0" layoutY="73.0" prefHeight="200.0" prefWidth="167.0" />
+        <ListView fx:id="users" layoutX="395.0" layoutY="73.0" prefHeight="200.0" prefWidth="167.0" />
+        <Label layoutX="77.0" layoutY="48.0" text="Current Bid" />
+        <Label layoutX="252.0" layoutY="48.0" text="Bidding Result" />
+        <Label layoutX="463.0" layoutY="48.0" text="Users" />
+        <Button layoutX="240.0" layoutY="401.0" mnemonicParsing="false" onAction="#publishProduct" text="Publish Product" />
+        <Button layoutX="410.0" layoutY="401.0" mnemonicParsing="false" onAction="#publishResult" text="Publish Result" />
+        <Label fx:id="currentUser" layoutX="486.0" layoutY="14.0" text="Server">
+            <padding>
+                <Insets right="20.0" />
+            </padding>
+        </Label>
+        <ChoiceBox fx:id="choice" layoutX="35.0" layoutY="401.0" prefWidth="150.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Product 1" />
+                    <String fx:value="Product 2" />
+                    <String fx:value="Product 3" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+      <Label layoutX="68.0" layoutY="384.0" text="Select product" />
+
+      <Label layoutX="131.0" layoutY="319.0" text="Current Algorithm: " />
+      <Label fx:id="algorithm" layoutX="253.0" layoutY="319.0" text="Sequencer-based" />
+      <Button layoutX="400.0" layoutY="313.0" mnemonicParsing="false" onAction="#switchAlgorithm" text="Switch Algorithm" />
+
+    </children>
+</Pane>
